@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/David-Tawil-07-07-2021/static/css/main.31464df4.chunk.css",
-    "main.js": "/David-Tawil-07-07-2021/static/js/main.e65e26cf.chunk.js",
-    "main.js.map": "/David-Tawil-07-07-2021/static/js/main.e65e26cf.chunk.js.map",
+    "main.js": "/David-Tawil-07-07-2021/static/js/main.a9eebb4a.chunk.js",
+    "main.js.map": "/David-Tawil-07-07-2021/static/js/main.a9eebb4a.chunk.js.map",
     "runtime-main.js": "/David-Tawil-07-07-2021/static/js/runtime-main.b1109865.js",
     "runtime-main.js.map": "/David-Tawil-07-07-2021/static/js/runtime-main.b1109865.js.map",
     "static/js/2.f513ef55.chunk.js": "/David-Tawil-07-07-2021/static/js/2.f513ef55.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.b1109865.js",
     "static/js/2.f513ef55.chunk.js",
     "static/css/main.31464df4.chunk.css",
-    "static/js/main.e65e26cf.chunk.js"
+    "static/js/main.a9eebb4a.chunk.js"
   ]
 }
