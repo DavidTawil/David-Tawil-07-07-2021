@@ -10,12 +10,12 @@ export default function WeatherDetailsHeader() {
       container
       item
       justifyContent="space-between"
-      style={{ padding: "0 40px" }}
+      style={{ padding: "0 1rem" }}
     >
-      <Grid container item xs={6}>
+      <Grid container item xs={10}>
         <CurrentWeather />
       </Grid>
-      <Grid container item xs={6} justifyContent="flex-end">
+      <Grid container item xs={2} justifyContent="flex-end">
         <FavoritesIconButton />
       </Grid>
     </Grid>

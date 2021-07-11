@@ -1,14 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { locations, fiveDayForecast, locationCurrentWeather } from "../tests";
 import { defaultLocationData } from "../utils/globals";
 
 const initialState = {
   locationsOptions: [],
   selectedLocation: defaultLocationData,
-  // locationCurrentWeather: [],
-  // locationFiveDayForecast: [],
-  locationCurrentWeather: locationCurrentWeather,
-  locationFiveDayForecast: fiveDayForecast,
+  locationCurrentWeather: [],
+  locationFiveDayForecast: [],
 };
 
 const homeSlice = createSlice({

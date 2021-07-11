@@ -27,6 +27,8 @@ export const getLocationByGeo = (lat, lon) => {
           })
         );
       });
+
+    dispatch(uiActions.setIsLoading(false));
   };
 };
 export const getLocationsOptions = (str) => {

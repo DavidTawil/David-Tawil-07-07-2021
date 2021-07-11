@@ -35,7 +35,7 @@ function App() {
   const error = useSelector((state) => state.ui.error);
 
   useEffect(() => {
-    // navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
+    navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
   }, []);
 
   const locationSuccess = (position) => {

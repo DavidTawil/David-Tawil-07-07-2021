@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Grid, makeStyles } from "@material-ui/core";
+import { Grid, makeStyles, Typography, Paper } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
 import { getFavoritesData } from "../store/favorites-actions";
@@ -15,8 +15,17 @@ const useStyles = makeStyles((theme) => ({
     padding: "3rem 6rem",
   },
   cardContainer: {
-    width: "15%",
-    height: "40%",
+    height: "50%",
+    [theme.breakpoints.down("sm")]: {
+      height: "30%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "25%",
+    },
+  },
+  noFavoritesPaper: {
+    height: "fit-content",
+    padding: "30px",
   },
 }));
 
@@ -33,8 +42,9 @@ export default function Favorites() {
   const unitType = useSelector((state) => state.ui.unitType);
 
   useEffect(() => {
+    console.log(favoriteLocations);
     if (favoriteLocations.length) {
-    //   dispatch(getFavoritesData(favoriteLocations));
+      dispatch(getFavoritesData(favoriteLocations));
     }
   }, [favoriteLocations, dispatch]);
 
@@ -44,6 +54,17 @@ export default function Favorites() {
   };
 
   const cards = [];
+  if (!favoriteLocations.length) {
+    cards.push(
+      <Paper elevation={2} className={classes.noFavoritesPaper}>
+        <Grid container>
+          <Typography variant="h6">
+            There are no favorite locations to display
+          </Typography>
+        </Grid>
+      </Paper>
+    );
+  }
   if (favoritesData.length === favoriteLocations.length && !isLoading) {
     favoritesData.map((locationData, index) =>
       cards.push(
@@ -51,6 +72,11 @@ export default function Favorites() {
           key={favoriteLocations[index].LocalizedName}
           container
           item
+          xl={2}
+          lg={3}
+          md={4}
+          sm={6}
+          xs={12}
           className={classes.cardContainer}
           onClick={() => locationClickedHandler(favoriteLocations[index])}
         >
@@ -66,7 +92,13 @@ export default function Favorites() {
   }
 
   return (
-    <Grid container spacing={2} className={classes.favoritesContainer}>
+    <Grid
+      container
+      spacing={2}
+      alignItems={!favoriteLocations.length ? "center" : "flex-start"}
+      justifyContent="center"
+      className={classes.favoritesContainer}
+    >
       {!isLoading ? cards : Spinner(80)}
     </Grid>
   );

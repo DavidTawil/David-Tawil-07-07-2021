@@ -152,7 +152,6 @@ export const locations = [
 ];
 
 export const locationCurrentWeather = [
-  // [
   {
     LocalObservationDateTime: "2021-07-09T14:46:00+03:00",
     EpochTime: 1625831160,
@@ -177,59 +176,6 @@ export const locationCurrentWeather = [
       "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
     Link: "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
   },
-  // ],
-  // [
-  //   {
-  //     LocalObservationDateTime: "2021-07-09T14:46:00+03:00",
-  //     EpochTime: 1625831160,
-  //     WeatherText: "Sunny",
-  //     WeatherIcon: 1,
-  //     HasPrecipitation: false,
-  //     PrecipitationType: null,
-  //     IsDayTime: true,
-  //     Temperature: {
-  //       Metric: {
-  //         Value: 29.8,
-  //         Unit: "C",
-  //         UnitType: 17,
-  //       },
-  //       Imperial: {
-  //         Value: 86,
-  //         Unit: "F",
-  //         UnitType: 18,
-  //       },
-  //     },
-  //     MobileLink:
-  //       "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
-  //     Link: "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
-  //   },
-  // ],
-  // [
-  //   {
-  //     LocalObservationDateTime: "2021-07-09T14:46:00+03:00",
-  //     EpochTime: 1625831160,
-  //     WeatherText: "Sunny",
-  //     WeatherIcon: 1,
-  //     HasPrecipitation: false,
-  //     PrecipitationType: null,
-  //     IsDayTime: true,
-  //     Temperature: {
-  //       Metric: {
-  //         Value: 29.8,
-  //         Unit: "C",
-  //         UnitType: 17,
-  //       },
-  //       Imperial: {
-  //         Value: 86,
-  //         Unit: "F",
-  //         UnitType: 18,
-  //       },
-  //     },
-  //     MobileLink:
-  //       "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
-  //     Link: "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
-  //   },
-  // ],
 ];
 
 export const fiveDayForecast = {
@@ -427,9 +373,149 @@ export const favoriteLocations = [
     Type: "City",
     Version: 1,
   },
+  {
+    AdministrativeArea: { ID: "TA", LocalizedName: "Holon" },
+    Country: { ID: "IL", LocalizedName: "Israel" },
+    Key: "123455",
+    LocalizedName: "Holon",
+    Rank: 31,
+    Type: "City",
+    Version: 1,
+  },
+  {
+    AdministrativeArea: { ID: "TA", LocalizedName: "Holon" },
+    Country: { ID: "IL", LocalizedName: "Israel" },
+    Key: "123455",
+    LocalizedName: "Holon",
+    Rank: 31,
+    Type: "City",
+    Version: 1,
+  },
+  {
+    AdministrativeArea: { ID: "TA", LocalizedName: "Holon" },
+    Country: { ID: "IL", LocalizedName: "Israel" },
+    Key: "123455",
+    LocalizedName: "Holon",
+    Rank: 31,
+    Type: "City",
+    Version: 1,
+  },
+  {
+    AdministrativeArea: { ID: "TA", LocalizedName: "Holon" },
+    Country: { ID: "IL", LocalizedName: "Israel" },
+    Key: "123455",
+    LocalizedName: "Holon",
+    Rank: 31,
+    Type: "City",
+    Version: 1,
+  },
 ];
 
 export const favoriteLocationsData = [
+  [
+    {
+      LocalObservationDateTime: "2021-07-09T14:46:00+03:00",
+      EpochTime: 1625831160,
+      WeatherText: "Sunny",
+      WeatherIcon: 1,
+      HasPrecipitation: false,
+      PrecipitationType: null,
+      IsDayTime: true,
+      Temperature: {
+        Metric: {
+          Value: 29.8,
+          Unit: "C",
+          UnitType: 17,
+        },
+        Imperial: {
+          Value: 86,
+          Unit: "F",
+          UnitType: 18,
+        },
+      },
+      MobileLink:
+        "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
+      Link: "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
+    },
+  ],
+  [
+    {
+      LocalObservationDateTime: "2021-07-09T14:46:00+03:00",
+      EpochTime: 1625831160,
+      WeatherText: "Sunny",
+      WeatherIcon: 1,
+      HasPrecipitation: false,
+      PrecipitationType: null,
+      IsDayTime: true,
+      Temperature: {
+        Metric: {
+          Value: 29.8,
+          Unit: "C",
+          UnitType: 17,
+        },
+        Imperial: {
+          Value: 86,
+          Unit: "F",
+          UnitType: 18,
+        },
+      },
+      MobileLink:
+        "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
+      Link: "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
+    },
+  ],
+  [
+    {
+      LocalObservationDateTime: "2021-07-09T14:46:00+03:00",
+      EpochTime: 1625831160,
+      WeatherText: "Sunny",
+      WeatherIcon: 1,
+      HasPrecipitation: false,
+      PrecipitationType: null,
+      IsDayTime: true,
+      Temperature: {
+        Metric: {
+          Value: 29.8,
+          Unit: "C",
+          UnitType: 17,
+        },
+        Imperial: {
+          Value: 86,
+          Unit: "F",
+          UnitType: 18,
+        },
+      },
+      MobileLink:
+        "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
+      Link: "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
+    },
+  ],
+  [
+    {
+      LocalObservationDateTime: "2021-07-09T14:46:00+03:00",
+      EpochTime: 1625831160,
+      WeatherText: "Sunny",
+      WeatherIcon: 1,
+      HasPrecipitation: false,
+      PrecipitationType: null,
+      IsDayTime: true,
+      Temperature: {
+        Metric: {
+          Value: 29.8,
+          Unit: "C",
+          UnitType: 17,
+        },
+        Imperial: {
+          Value: 86,
+          Unit: "F",
+          UnitType: 18,
+        },
+      },
+      MobileLink:
+        "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
+      Link: "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
+    },
+  ],
   [
     {
       LocalObservationDateTime: "2021-07-09T14:46:00+03:00",

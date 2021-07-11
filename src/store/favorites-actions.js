@@ -1,12 +1,11 @@
 import { accuweatherInstance, apikey } from "../utils/axios";
 import { favoritesActions } from "./favorites-slice";
 import { uiActions } from "./ui-slice";
-
 export const getFavoritesData = (favorites) => {
   return async (dispatch) => {
     dispatch(uiActions.setIsLoading(true));
 
-    favorites.map(async (location) => {
+    favorites.map(async (location, index) => {
       await accuweatherInstance
         .get(`/currentconditions/v1/${location.Key}`, {
           params: {
@@ -15,7 +14,7 @@ export const getFavoritesData = (favorites) => {
         })
         .then((response) => {
           dispatch(
-            favoritesActions.updateFavoritesData({ data: response.data })
+            favoritesActions.updateFavoritesData({ data: response.data, index })
           );
         })
         .catch(() => {

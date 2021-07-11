@@ -31,14 +31,13 @@ export default function Home() {
   const unitType = useSelector((state) => state.ui.unitType);
 
   useEffect(() => {
-    //each time selectedLocation is changed, fetch new location weather + forecast
-    // dispatch(getLocationWeather(selectedLocation, unitType));
+    dispatch(getLocationWeather(selectedLocation, unitType));
   }, [selectedLocation, dispatch, unitType]);
 
   const fetchLocations = (event) => {
     const str = event.currentTarget.value;
     if (str.length >= 2) {
-      // dispatch(getLocationsOptions(str));
+      dispatch(getLocationsOptions(str));
     }
   };
 
@@ -69,7 +68,6 @@ export default function Home() {
               label="Choose location"
               size="small"
               onChange={fetchLocations}
-              // inputProps={{pattern: "[a-zA-Z ]"}}
             />
           )}
         />

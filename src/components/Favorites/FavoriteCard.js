@@ -6,6 +6,7 @@ import { weatherIcons } from "../../utils/globals";
 const useStyles = makeStyles((theme) => ({
   paper: {
     width: "100%",
+    height: "100%",
     overflow: "hidden",
     backgroundColor: "#f9f9f9",
     cursor: "pointer",
@@ -37,23 +38,31 @@ export default function FavoriteCard({
         justifyContent="space-evenly"
         className={classes.container}
       >
-        <Grid item>
+        <Grid item style={{ whiteSpace: "nowrap" }}>
           <Typography variant="h4">{name}</Typography>
+        </Grid>
+        <Grid
+          container
+          item
+          justifyContent="center"
+          style={{ height: "fit-content" }}
+        >
+          <Typography variant="h6">{temperature}</Typography>
         </Grid>
         <Grid item>
           <Typography variant="h5">{description}</Typography>
         </Grid>
-        <Grid container item justifyContent="space-between" alignItems="center">
-          <Grid item style={{ height: "fit-content" }}>
-            <Typography variant="h6">{temperature}</Typography>
-          </Grid>
-          <Grid item style={{ height: "fit-content" }}>
-            <img
-              src={weatherIcons[iconId]}
-              alt="weather-icon"
-              style={{ width: "90px", height: "55px" }}
-            />
-          </Grid>
+        <Grid
+          container
+          item
+          justifyContent="center"
+          style={{ height: "fit-content" }}
+        >
+          <img
+            src={weatherIcons[iconId]}
+            alt="weather-icon"
+            style={{ width: "75px", height: "45px" }}
+          />
         </Grid>
       </Grid>
     </Paper>

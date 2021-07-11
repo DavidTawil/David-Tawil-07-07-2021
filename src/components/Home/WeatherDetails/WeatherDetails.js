@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     width: "70%",
     backgroundColor: "rgba(255,255,255, 0.4)",
-    padding: "2rem",
+    padding: "1.5rem",
   },
 }));
 

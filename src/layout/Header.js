@@ -2,7 +2,14 @@ import React from "react";
 import clsx from "clsx";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
-import { Grid, makeStyles, Typography, Button } from "@material-ui/core";
+import {
+  Grid,
+  makeStyles,
+  Typography,
+  Button,
+  Hidden,
+  IconButton,
+} from "@material-ui/core";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import FavoriteRoundedIcon from "@material-ui/icons/FavoriteRounded";
 
@@ -20,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     color: theme.palette.text.secondary,
     border: `1px solid ${theme.palette.text.secondary}`,
+    minWidth: "100px",
   },
   selectedButton: {
     border: `3px solid ${theme.palette.text.secondary}`,
@@ -74,7 +82,14 @@ const Header = () => {
           Weather task
         </Typography>
       </Grid>
-      <Grid container item xs={6} justifyContent="flex-end" alignItems="center">
+      <Grid
+        container
+        item
+        xs={6}
+        justifyContent="flex-end"
+        alignItems="center"
+        wrap="nowrap"
+      >
         <Grid item className={classes.unitLabel}>
           °C
         </Grid>
@@ -93,29 +108,39 @@ const Header = () => {
         >
           °F
         </Grid>
-        <Button
-          variant="outlined"
-          startIcon={<HomeRoundedIcon style={{ color: "#fff" }} />}
-          onClick={() => tabClickedHandler("Home")}
-          className={clsx(classes.button, {
-            [classes.selectedButton]: !isFavoritesView,
-          })}
-          style={{ marginRight: "8px" }}
-        >
-          Home
-        </Button>
-        <Button
-          variant="outlined"
-          startIcon={
+        <Hidden smDown>
+          <Button
+            variant="outlined"
+            startIcon={<HomeRoundedIcon style={{ color: "#fff" }} />}
+            onClick={() => tabClickedHandler("Home")}
+            className={clsx(classes.button, {
+              [classes.selectedButton]: !isFavoritesView,
+            })}
+            style={{ marginRight: "8px" }}
+          >
+            Home
+          </Button>
+          <Button
+            variant="outlined"
+            startIcon={
+              <FavoriteRoundedIcon style={{ color: colors.favoritesColor }} />
+            }
+            onClick={() => tabClickedHandler("Favorites")}
+            className={clsx(classes.button, {
+              [classes.selectedButton]: isFavoritesView,
+            })}
+          >
+            Favorites
+          </Button>
+        </Hidden>
+        <Hidden mdUp>
+          <IconButton onClick={() => tabClickedHandler("Home")}>
+            <HomeRoundedIcon style={{ color: "#fff" }} />
+          </IconButton>
+          <IconButton onClick={() => tabClickedHandler("Favorites")}>
             <FavoriteRoundedIcon style={{ color: colors.favoritesColor }} />
-          }
-          onClick={() => tabClickedHandler("Favorites")}
-          className={clsx(classes.button, {
-            [classes.selectedButton]: isFavoritesView,
-          })}
-        >
-          Favorites
-        </Button>
+          </IconButton>
+        </Hidden>
       </Grid>
     </Grid>
   );

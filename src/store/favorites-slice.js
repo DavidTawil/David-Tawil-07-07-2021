@@ -1,10 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { favoriteLocationsData, favoriteLocations } from "../tests";
 
 const initialState = {
-  favoriteLocations: favoriteLocations,
-  favoritesData: favoriteLocationsData,
+  favoriteLocations: [],
+  favoritesData: [],
 };
 
 const favoritesSlice = createSlice({
@@ -15,11 +14,11 @@ const favoritesSlice = createSlice({
       state.favoriteLocations.push(action.payload.location);
     },
     removeFromFavorites(state, action) {
-      const index = state.favoriteLocations.map((location, i) => {
-        if (location.Key === action.payload.locationKey) {
-          return i;
-        }
-      });
+      const index = state.favoriteLocations.findIndex(
+        (location) => location.Key === action.payload.locationKey
+      );
+
+      console.log(index);
 
       state.favoriteLocations = state.favoriteLocations.filter(
         (location) => location.Key !== action.payload.locationKey
@@ -27,7 +26,7 @@ const favoritesSlice = createSlice({
       state.favoritesData = state.favoritesData.splice(index, 1);
     },
     updateFavoritesData(state, action) {
-      state.favoritesData.push(action.payload.data);
+      state.favoritesData[action.payload.index] = action.payload.data;
     },
   },
 });
