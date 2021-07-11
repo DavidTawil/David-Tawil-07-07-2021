@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/David-Tawil-07-07-2021/static/css/main.31464df4.chunk.css",
+    "main.js": "/David-Tawil-07-07-2021/static/js/main.9b6be9d0.chunk.js",
+    "main.js.map": "/David-Tawil-07-07-2021/static/js/main.9b6be9d0.chunk.js.map",
+    "runtime-main.js": "/David-Tawil-07-07-2021/static/js/runtime-main.90b26815.js",
+    "runtime-main.js.map": "/David-Tawil-07-07-2021/static/js/runtime-main.90b26815.js.map",
+    "static/js/2.fc48fb89.chunk.js": "/David-Tawil-07-07-2021/static/js/2.fc48fb89.chunk.js",
+    "static/js/2.fc48fb89.chunk.js.map": "/David-Tawil-07-07-2021/static/js/2.fc48fb89.chunk.js.map",
+    "static/js/3.209d41d2.chunk.js": "/David-Tawil-07-07-2021/static/js/3.209d41d2.chunk.js",
+    "static/js/3.209d41d2.chunk.js.map": "/David-Tawil-07-07-2021/static/js/3.209d41d2.chunk.js.map",
+    "index.html": "/David-Tawil-07-07-2021/index.html",
+    "static/css/main.31464df4.chunk.css.map": "/David-Tawil-07-07-2021/static/css/main.31464df4.chunk.css.map",
+    "static/js/2.fc48fb89.chunk.js.LICENSE.txt": "/David-Tawil-07-07-2021/static/js/2.fc48fb89.chunk.js.LICENSE.txt",
+    "static/media/mostlyCloudyWtStormsDay.02f6796a.png": "/David-Tawil-07-07-2021/static/media/mostlyCloudyWtStormsDay.02f6796a.png",
+    "static/media/partlyCloudyWtStorms.da896071.png": "/David-Tawil-07-07-2021/static/media/partlyCloudyWtStorms.da896071.png",
+    "static/media/partlySunnyWtStorms.4b8d4543.png": "/David-Tawil-07-07-2021/static/media/partlySunnyWtStorms.4b8d4543.png",
+    "static/media/tStorms.9aac7942.png": "/David-Tawil-07-07-2021/static/media/tStorms.9aac7942.png",
+    "static/media/index.css": "/David-Tawil-07-07-2021/static/media/weather-background.35b3fb5f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.90b26815.js",
+    "static/js/2.fc48fb89.chunk.js",
+    "static/css/main.31464df4.chunk.css",
+    "static/js/main.9b6be9d0.chunk.js"
+  ]
+}
