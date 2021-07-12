@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Grid, makeStyles, Snackbar } from "@material-ui/core";
@@ -8,8 +8,7 @@ import Header from "./layout/Header";
 import Home from "./containers/Home";
 import Favorites from "./containers/Favorites";
 import { uiActions } from "./store/ui-slice";
-import { defaultLocationData, errorMessages } from "./utils/globals";
-import { homeActions } from "./store/home-slice";
+import { errorMessages } from "./utils/globals";
 import { getLocationByGeo } from "./store/home-actions";
 
 function Alert(props) {
@@ -34,24 +33,27 @@ function App() {
 
   const error = useSelector((state) => state.ui.error);
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
-  }, []);
+  const locationSuccess = useCallback(
+    (position) => {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      dispatch(getLocationByGeo(latitude, longitude));
+    },
+    [dispatch]
+  );
 
-  const locationSuccess = (position) => {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    dispatch(getLocationByGeo(latitude, longitude));
-  };
-
-  const locationError = () => {
+  const locationError = useCallback(() => {
     dispatch(
       uiActions.setShowError({
         showError: true,
         errorMsg: errorMessages.geolocationFailed,
       })
     );
-  };
+  }, [dispatch]);
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
+  }, [locationSuccess, locationError]);
 
   const handleErrorClose = (_, reason) => {
     if (reason === "clickaway") {
